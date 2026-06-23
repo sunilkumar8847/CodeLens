@@ -1,0 +1,38 @@
+# ─── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+
+# ─── Virtual Environment ─────────────────────────────────
+venv/
+.venv/
+env/
+
+# ─── Environment Variables ───────────────────────────────
+.env
+.env.local
+.env.production
+
+# ─── IDE / Editor ────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ─── ChromaDB / Vector Store ─────────────────────────────
+vector_db/
+
+# ─── Cloned Repositories ─────────────────────────────────
+Backend/repo/
+
+# ─── OS Files ────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Gradio ──────────────────────────────────────────────
+flagged/

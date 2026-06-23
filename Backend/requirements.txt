@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+litellm
+langchain-huggingface
+langchain-text-splitters
+chromadb
+pydantic
+tenacity
+tqdm
+gitpython
+sentence-transformers
+gradio
+httpx
