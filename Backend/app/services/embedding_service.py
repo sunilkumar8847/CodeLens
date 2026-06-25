@@ -4,10 +4,17 @@ from models.schemas import Result
 from storage.vector_store import clear_and_get_collection
 # from storage.vector_store import clear_and_get_collection, query_search
 
-model = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL_NAME)
-
+# Lazy Loading
+model = None
+def _get_model():
+    global model
+    if model is None:
+        print("[embeddings] Loading model (first time)...")
+        model = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL_NAME)
+    return model
+    
 def embed_query(text: str) -> list[float]:
-    return model.embed_query(text)
+    return _get_model().embed_query(text)
 
 def create_embedding(chunks: list[Result]) -> int:
     if not chunks:
